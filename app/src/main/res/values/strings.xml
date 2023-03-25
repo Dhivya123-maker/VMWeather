@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">VMWeather</string>
+
+    <string-array name="city">
+        <item>Select City</item>
+        <item>Chennai</item>
+        <item>Salem</item>
+        <item>Coimbatore</item>
+        <item>Karur</item>
+        <item>Tanjore</item>
+        <item>Trichy</item>
+        <item>Erode</item>
+        <item>Madurai</item>
+        <item>Tirunelveli</item>
+        <item>Tiruppur</item>
+        <item>Vellore</item>
+        <item>Dindigal</item>
+        <item>Thoothukkudi</item>
+        <item>Ranipet</item>
+        <item>Sivakasi</item>
+        <item>Udhagamandalam</item>
+        <item>Hosur</item>
+        <item>Nagercoil</item>
+        <item>Kanchipuram</item>
+        <item>Namakkal</item>
+        <item>Karaikkudi</item>
+        <item>Neyveli</item>
+        <item>Cuddalore</item>
+        <item>Kumbakonam</item>
+        <item>Thiruvanamalai</item>
+        <item>Pollachi</item>
+        <item>Rajapalayam</item>
+        <item>Kumbakonam</item>
+        <item>Pudukottai</item>
+        <item>Ambur</item>
+        <item>Nagapattinam</item>
+    </string-array>
+</resources>

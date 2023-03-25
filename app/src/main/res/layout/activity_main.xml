@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+<RelativeLayout
+    android:id="@+id/r_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_500">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cloud"
+        android:id="@+id/cloud_image"
+        android:scaleType="centerCrop"
+        android:alpha="0.4">
+
+    </ImageView>
+
+
+        <RelativeLayout
+            android:id="@+id/relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="30dp">
+
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+               android:layout_centerHorizontal="true"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-medium" />
+
+            <ImageView
+                android:id="@+id/menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/menu">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_below="@id/relative_layout">
+
+        <RelativeLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="visible"
+                android:indeterminate="true"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:orientation="vertical">
+
+                <TextView android:id="@+id/temp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="70sp"
+                    android:gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"
+                    android:text=" "/>
+
+                <TextView android:id="@+id/min_max"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"
+                    android:text=" "/>
+                <TextView android:id="@+id/weather_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"
+                    android:text=" "/>
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/weatherIcon"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/summer">
+
+                    </ImageView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="AccWeather"
+                        android:textSize="12sp"
+                        android:layout_marginStart="5dp"
+                        android:textColor="@color/white"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/updated_at"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text=" "
+                            android:textSize="12sp"
+                            android:layout_alignParentRight="true"
+                            android:textColor="@color/white"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/white"
+                    android:alpha="0.4">
+
+                </View>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="HUMIDITY"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                    android:fontFamily="sans-serif-medium">
+
+                </TextView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+                        <ProgressBar
+                            android:id="@+id/progressBar"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            style="@style/CircularDeterminateProgressBar"
+                            tools:progress="60"/>
+
+                        <TextView
+                            android:id="@+id/humidity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="55dp"
+                            android:layout_marginTop="55dp"
+                            android:layout_marginEnd="55dp"
+                            android:layout_marginBottom="55dp"
+                            android:textColor="@color/white"
+                            android:textSize="12dp" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="40dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Feels like  :"
+                                android:layout_gravity="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:fontFamily="sans-serif-light">
+
+                            </TextView>
+                            <TextView
+                                android:id="@+id/feels_like"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" "
+                                android:layout_gravity="center"
+                                android:layout_marginStart="5dp"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:fontFamily="sans-serif-medium">
+
+                            </TextView>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/white"
+                    android:alpha="0.4">
+
+                </View>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="WIND"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                    android:fontFamily="sans-serif-medium">
+
+                </TextView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp">
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/wind_image"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:src="@drawable/wind_turbine"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Speed  :"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="50dp"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:fontFamily="sans-serif-light">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/wind_speed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" "
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:fontFamily="sans-serif-medium">
+
+                </TextView>
+
+
+            </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/white"
+                    android:alpha="0.4">
+
+                </View>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="SUNRISE AND SUNSET"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                    android:fontFamily="sans-serif-medium">
+
+                </TextView>
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:id="@+id/sunrise_animation"
+                    app:lottie_rawRes="@raw/sunrise_animation"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/white"
+                    android:alpha="0.4">
+
+                </View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/sunrise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" "
+                        android:textColor="@color/white"
+                        android:fontFamily="sans-serif-light"
+                        android:textSize="12sp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_centerHorizontal="true">
+
+                        <ImageView
+                            android:layout_width="17dp"
+                            android:layout_height="17dp"
+                            android:src="@drawable/moon">
+
+                        </ImageView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Waning gibbous"
+                            android:layout_marginStart="5dp"
+                            android:textColor="@color/white"
+                            android:fontFamily="sans-serif-light"
+                            android:textSize="12sp"/>
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/sunset"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" "
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/white"
+                        android:fontFamily="sans-serif-light"
+                        android:textSize="12sp"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Weather version: 10.0.1.506"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif-light"
+                    android:textSize="12sp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Weather Privacy Notice"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
+</layout>

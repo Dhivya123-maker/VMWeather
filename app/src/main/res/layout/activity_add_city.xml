@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".AddCityActivity">
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Choose City"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textSize="18sp">
+
+        </TextView>
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/bg"
+            android:elevation="2dp">
+
+        </Spinner>
+
+
+
+        <Button
+            android:id="@+id/add_city_btn"
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            android:background="@drawable/bg"
+            android:backgroundTint="@color/purple_500"
+            android:elevation="2dp"
+            android:letterSpacing="0.01"
+            android:text="Add City"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+
+</layout>
+
+
+
